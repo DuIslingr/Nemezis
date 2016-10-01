@@ -18,7 +18,6 @@ namespace Nemizisv2
         public bool _CanRun = true;
 
         private bool lldbGDB1WasClicked = false;
-        private bool lldbGDB2WasClicked = false;
 
         private string _FilesFolderPath = AppDomain.CurrentDomain.BaseDirectory + "files";
         private string _PathLLVMMCexe { get { return Path.Combine(_FilesFolderPath, "llvm-mc.exe"); } }
@@ -77,7 +76,6 @@ namespace Nemizisv2
 
         private void convertHexToAsm_Click_1(object sender, RoutedEventArgs e)
         {
-            lldbGDB2WasClicked = true;
             string input = HEX2ASM_HEXBX.Text;
             string[] hexvals = input.Split(' ');
             if (hexvals.Length <= 0)
@@ -177,16 +175,10 @@ namespace Nemizisv2
                 p.StartInfo.Arguments = string.Format(_LlvmExecuteCommand, _PathInputFile, getSelectedParamBE());
                 lldbGDB1WasClicked = false;
             }
-            else if (toggleButton.IsChecked == true && lldbGDB2WasClicked)
-            {
-                p.StartInfo.Arguments = string.Format(_LlvmExecuteCommand, _PathInputFile, getSelectedParamBE());
-                lldbGDB2WasClicked = false;
-            }
             else
             {
                 p.StartInfo.Arguments = string.Format(_LlvmExecuteCommand, _PathInputFile, getSelectedParam());
                 lldbGDB1WasClicked = false;
-                lldbGDB2WasClicked = false;
             }
             if (isDisassemble)
             {

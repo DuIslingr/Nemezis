@@ -19,8 +19,6 @@
                 <Label x:Name="Assembly2" Content="Hex" Height="25.098" Margin="-0.001,-3.029,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70.521"/>
                 <Label x:Name="Hex2" Content="Assembly&#xD;&#xA;" Margin="0,48.069,0,0" HorizontalAlignment="Left" Height="24.953" VerticalAlignment="Top"/>
                 <TextBox x:Name="HEX2ASM_ASMBX" Height="23" Margin="-0.001,73.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="223.001"/>
-                <ToggleButton x:Name="toggleButton1" Content="ToggleButton" Margin="144,22,8.413,0" VerticalAlignment="Top" Height="23" IsHitTestVisible="True"/>
-                <Label x:Name="Assembly2_Copy" Content="LLDB/GDB" Height="25.167" Margin="0,-3.098,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="77.413"/>
             </Grid>
         </GroupBox>
 
