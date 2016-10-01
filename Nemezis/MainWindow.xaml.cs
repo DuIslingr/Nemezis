@@ -234,11 +234,11 @@ namespace Nemizisv2
             }
             else if (radioThumb.IsChecked == true)
             {
-                    param = "-arch=thumb";
+                    param = "-triple=thumbv7";
             }
             else if (radioAarch64.IsChecked == true)
             {
-                    param = "-arch=aarch64";
+                    param = "-triple=aarch64";
             }
             else if (radioX86.IsChecked == true)
             {
@@ -260,11 +260,12 @@ namespace Nemizisv2
             }
             else if (radioThumb.IsChecked == true)
             {
-                    param = "-arch=thumbeb";
+                    param = "-triple=thumbv7eb";
             }
             else if (radioAarch64.IsChecked == true)
             {
-                    param = "-arch=aarch64_be";
+                    param = "-triple=aarch64_be";
+                    MessageBox.Show("Supposedly Big Endian is supported, but it seems to be the same hex. So just disable LLDB/GDB for arm64");
             }
             else if (radioX86.IsChecked == true)
             {
