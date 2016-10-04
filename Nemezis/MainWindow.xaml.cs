@@ -170,16 +170,8 @@ namespace Nemizisv2
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.CreateNoWindow = true;
             p.StartInfo.FileName = _PathLLVMMCexe;
-            if (toggleButton.IsChecked == true && lldbGDB1WasClicked)
-            {
-                p.StartInfo.Arguments = string.Format(_LlvmExecuteCommand, _PathInputFile, getSelectedParamBE());
-                lldbGDB1WasClicked = false;
-            }
-            else
-            {
-                p.StartInfo.Arguments = string.Format(_LlvmExecuteCommand, _PathInputFile, getSelectedParam());
-                lldbGDB1WasClicked = false;
-            }
+            p.StartInfo.Arguments = string.Format(_LlvmExecuteCommand, _PathInputFile, getSelectedParam());
+
             if (isDisassemble)
             {
                 p.StartInfo.Arguments += " -disassemble";
@@ -222,50 +214,49 @@ namespace Nemizisv2
             string param = "";
             if (radioArm.IsChecked == true)
             {
-                    param = "-triple=armv7";
-            }
-            else if (radioThumb.IsChecked == true)
-            {
-                    param = "-triple=thumbv7";
-            }
-            else if (radioAarch64.IsChecked == true)
-            {
-                    param = "-triple=aarch64";
-            }
-            else if (radioX86.IsChecked == true)
-            {
-                    param = "-arch=x86";
-            }
-            else if (radioX86_64.IsChecked == true)
-            {
-                    param = "-arch=x86-64";
-            }
-            return param;
-        }
-
-        private string getSelectedParamBE()
-        {
-            string param = "";
-            if (radioArm.IsChecked == true)
-            {
+            if (toggleButton.IsChecked == true && lldbGDB1WasClicked)
                     param = "-triple=armv7eb";
+                    lldbGDB1WasClicked = false;
+            else
+                    param = "-triple=armv7";
+                    lldbGDB1WasClicked = false;
             }
             else if (radioThumb.IsChecked == true)
             {
+            if (toggleButton.IsChecked == true && lldbGDB1WasClicked)
                     param = "-triple=thumbv7eb";
+                    lldbGDB1WasClicked = false;
+            else
+                    param = "-triple=thumbv7";
+                    lldbGDB1WasClicked = false;
             }
             else if (radioAarch64.IsChecked == true)
             {
+            if (toggleButton.IsChecked == true && lldbGDB1WasClicked)
                     param = "-triple=aarch64_be";
+                    lldbGDB1WasClicked = false;
                     MessageBox.Show("Supposedly Big Endian is supported, but it seems to be the same hex. So just disable LLDB/GDB for arm64");
+            else
+                    param = "-triple=aarch64";
+                    lldbGDB1WasClicked = false;
             }
             else if (radioX86.IsChecked == true)
             {
+            if (toggleButton.IsChecked == true && lldbGDB1WasClicked)
                     MessageBox.Show("Big Endian aka GDB/LLDB Mode is not supported with this Architecture");
+                    lldbGDB1WasClicked = false;
+            else
+                    param = "-arch=x86";
+                    lldbGDB1WasClicked = false;
             }
             else if (radioX86_64.IsChecked == true)
             {
+            if (toggleButton.IsChecked == true && lldbGDB1WasClicked)
                     MessageBox.Show("Big Endian aka GDB/LLDB Mode is not supported with this Architecture");
+                    lldbGDB1WasClicked = false;
+            else
+                    param = "-arch=x86-64";
+                    lldbGDB1WasClicked = false;
             }
             return param;
         }
