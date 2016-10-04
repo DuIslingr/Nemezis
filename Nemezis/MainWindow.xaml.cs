@@ -220,23 +220,23 @@ namespace Nemizisv2
         private string getSelectedParam()
         {
             string param = "";
-            if (radioArm.IsChecked)
+            if (radioArm.IsChecked == true)
             {
                     param = "-triple=armv7";
             }
-            else if (radioThumb.IsChecked)
+            else if (radioThumb.IsChecked == true)
             {
                     param = "-triple=thumbv7";
             }
-            else if (radioAarch64.IsChecked)
+            else if (radioAarch64.IsChecked == true)
             {
                     param = "-triple=aarch64";
             }
-            else if (radioX86.IsChecked)
+            else if (radioX86.IsChecked == true)
             {
                     param = "-arch=x86";
             }
-            else if (radioX86_64.IsChecked)
+            else if (radioX86_64.IsChecked == true)
             {
                     param = "-arch=x86-64";
             }
@@ -246,24 +246,24 @@ namespace Nemizisv2
         private string getSelectedParamBE()
         {
             string param = "";
-            if (radioArm.IsChecked)
+            if (radioArm.IsChecked == true)
             {
                     param = "-triple=armv7eb";
             }
-            else if (radioThumb.IsChecked)
+            else if (radioThumb.IsChecked == true)
             {
                     param = "-triple=thumbv7eb";
             }
-            else if (radioAarch64.IsChecked)
+            else if (radioAarch64.IsChecked == true)
             {
                     param = "-triple=aarch64_be";
                     MessageBox.Show("Supposedly Big Endian is supported, but it seems to be the same hex. So just disable LLDB/GDB for arm64");
             }
-            else if (radioX86.IsChecked)
+            else if (radioX86.IsChecked == true)
             {
                     MessageBox.Show("Big Endian aka GDB/LLDB Mode is not supported with this Architecture");
             }
-            else if (radioX86_64.IsChecked)
+            else if (radioX86_64.IsChecked == true)
             {
                     MessageBox.Show("Big Endian aka GDB/LLDB Mode is not supported with this Architecture");
             }
