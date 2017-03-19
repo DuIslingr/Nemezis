@@ -43,6 +43,7 @@ public MainWindow()
         string localUserPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         CheckFiles();
+        ShowInTaskbar = true;
 }
 
 private void CheckFiles()
