@@ -11,40 +11,40 @@
                 TextElement.FontWeight="Medium"
                 TextElement.FontSize="14"
                 FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
-    <Grid Height="294.5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="368" Margin="10,0,0,0">
-        <GroupBox x:Name="Hex2Asm" Margin="0,148,0,0" Header="Hex to Asm" HorizontalAlignment="Left" Width="234" Height="136" VerticalAlignment="Top">
+    <Grid Height="318.588" VerticalAlignment="Top" HorizontalAlignment="Left" Width="368" Margin="10,0,0,0">
+        <GroupBox x:Name="Hex2Asm" Margin="0,159.57,0,0" Header="Hex to Asm" HorizontalAlignment="Left" Width="234" Height="149.018" VerticalAlignment="Top">
             <Grid Margin="0,0,-9.413,-13.8" Height="126" VerticalAlignment="Top">
-                <TextBox x:Name="HEX2ASM_HEXBX" Height="23" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="139"/>
+                <TextBox x:Name="HEX2ASM_HEXBX" Height="23" Margin="0,22,0,0" KeyDown="OnKeyDownHandler2" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="139"/>
 
                 <Label x:Name="Assembly2" Content="Hex" Height="25.098" Margin="-0.001,-3.029,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70.521"/>
                 <Label x:Name="Hex2" Content="Assembly&#xD;&#xA;" Margin="0,48.069,0,0" HorizontalAlignment="Left" Height="24.953" VerticalAlignment="Top"/>
-                <TextBox x:Name="HEX2ASM_ASMBX" Height="23" Margin="-0.001,73.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="223.001"/>
+                <TextBox x:Name="HEX2ASM_ASMBX" Height="25.215" Margin="-0.001,73.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="225.414"/>
             </Grid>
         </GroupBox>
 
-        <GroupBox x:Name="Asm2Hex" Margin="0,10,0,0" VerticalAlignment="Top" Height="133" Header="Asm to Hex" HorizontalAlignment="Left" Width="234">
+        <GroupBox x:Name="Asm2Hex" Margin="0,10,0,0" VerticalAlignment="Top" Height="144.57" Header="Asm to Hex" HorizontalAlignment="Left" Width="234">
             <Grid Margin="0,0,-9.413,-13.8" Height="123" VerticalAlignment="Top">
-                <TextBox x:Name="ASM2HEX_HEXBX" Margin="0,71.022,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="139" Height="23" VerticalAlignment="Top"/>
+                <TextBox x:Name="ASM2HEX_HEXBX" Margin="3.413,71.022,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="139" Height="23" VerticalAlignment="Top"/>
 
                 <Label x:Name="Assembly1" Content="Assembly" Height="25.098" Margin="-0.001,-3.029,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74.414"/>
                 <Label x:Name="Hex1" Content="Hex" Margin="0,48.069,0,0" HorizontalAlignment="Left" Height="22.953" VerticalAlignment="Top"/>
-                <TextBox x:Name="ASM2HEX_ASMBX" Height="23" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="221.413"/>
-                <ToggleButton x:Name="toggleButton" Content="ToggleButton" Margin="142.413,71.022,10,0" IsHitTestVisible="True" Height="23" VerticalAlignment="Top"/>
+                <TextBox x:Name="ASM2HEX_ASMBX" Height="23" Margin="0,22,0,0" KeyDown="OnKeyDownHandler1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="221.413"/>
+                <ToggleButton x:Name="toggleButton" Margin="142.413,71.022,10,0" IsHitTestVisible="True" Height="23" VerticalAlignment="Top"/>
                 <Label x:Name="Assembly2_Copy1" Content="LLDB/GDB" Margin="0,45.855,11.587,51.978" HorizontalAlignment="Right" Width="77.413"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="Architectures" Header="Architectures&#xD;&#xA;" Margin="239,67,0,0" HorizontalAlignment="Left" Width="119" Height="189" VerticalAlignment="Top">
-            <Grid Margin="0,-17.283,-12,-3.89" Height="169.573" VerticalAlignment="Top">
-                <RadioButton x:Name="radioArm" Content="ARMv7" Margin="0,21.51,20.209,0" Height="18.06" VerticalAlignment="Top"/>
-                <RadioButton x:Name="radioThumb" Content="Thumb" Margin="0,49.07,16.209,0" d:LayoutOverrides="Width" VerticalAlignment="Top"/>
-                <RadioButton x:Name="radioAarch64" Content="ARM64" Margin="0,75.87,20.209,0" d:LayoutOverrides="Width" Height="17.132" VerticalAlignment="Top" IsChecked="True"/>
-                <RadioButton x:Name="radioX86" Content="x86" Margin="0,102.836,10,0" VerticalAlignment="Top" d:LayoutOverrides="Width"/>
-                <RadioButton x:Name="radioX86_64" Content="x64" Margin="0,128.636,10,0" VerticalAlignment="Top" d:LayoutOverrides="Width"/>
+        <GroupBox x:Name="Architectures" Header="Architectures" Margin="239,67,0,0" HorizontalAlignment="Left" Width="119" Height="211" VerticalAlignment="Top" Background="White">
+            <Grid Margin="0,-17.283,0,-7.056" Height="182.373" VerticalAlignment="Top">
+                <RadioButton x:Name="radioArm" Content="ARMv7" Margin="4,22.003,16.209,0" Height="18.06" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioThumb" Content="Thumb" Margin="4,55.222,12.209,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioAarch64" Content="ARM64" Margin="4,87.193,16.209,0" Height="17.132" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton x:Name="radioX86" Content="x86" Margin="4,118.589,6,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioX86_64" Content="x64" Margin="4,153.573,12.209,0" VerticalAlignment="Top" RenderTransformOrigin="0.708,0.315"/>
             </Grid>
         </GroupBox>
         <Button x:Name="convertAsmToHex" Content="Convert Asm" Margin="239,10,0,0" VerticalAlignment="Top" Height="24" HorizontalAlignment="Left" Width="119" Click="convertAsmToHex_Click_1"/>
         <Button x:Name="convertHexToAsm" Content="Convert Hex" Margin="239,39,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="119" Click="convertHexToAsm_Click_1" Height="23"/>
-        <Button x:Name="button2" Content="About" Margin="239,260,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="119" Click="button2_Click" Height="24"/>
+        <Button x:Name="button2" Content="About" Margin="239,282.742,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="119" Click="button2_Click" Height="24"/>
 
     </Grid>
 </metro:MetroWindow>
