@@ -318,7 +318,7 @@ namespace Nemizisv2
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Nemezis v1.0.1!\nCoded by Blizzard\nCoded and Designed by Du'Islingr", "About");
+            MessageBox.Show("Nemezis v1.0.2!\nCoded by Blizzard\nCoded and Designed by Du'Islingr", "About");
         }
 
     }

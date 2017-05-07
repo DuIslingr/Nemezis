@@ -3,14 +3,14 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Nemizisv2.MainWindow"
                 xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-                Title="Nemezis" Height="350" Width="525" ResizeMode="CanMinimize" ShowInTaskbar="False" SizeToContent="WidthAndHeight"
+                Title="Nemezis" Height="350" Width="525" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight"
                 GlowBrush="{DynamicResource AccentColorBrush}"
                 BorderThickness="1"
                 TextElement.Foreground="{DynamicResource MaterialDesignBody}"
                 Background="{DynamicResource MaterialDesignPaper}"
                 TextElement.FontWeight="Medium"
                 TextElement.FontSize="14"
-                FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+                FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto" OverlayBrush="Black">
     <Grid Height="318.588" VerticalAlignment="Top" HorizontalAlignment="Left" Width="368" Margin="10,0,0,0">
         <GroupBox x:Name="Hex2Asm" Margin="0,159.57,0,0" Header="Hex to Asm" HorizontalAlignment="Left" Width="234" Height="149.018" VerticalAlignment="Top">
             <Grid Margin="0,0,-9.413,-13.8" Height="126" VerticalAlignment="Top">
