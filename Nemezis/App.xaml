@@ -1,8 +1,8 @@
-﻿<Application
-    x:Class="Nemizisv2.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    StartupUri="MainWindow.xaml">
+﻿<Application x:Class="Nemezisv2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Nemezisv2"
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
 

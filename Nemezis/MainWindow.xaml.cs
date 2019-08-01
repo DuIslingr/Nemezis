@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -8,7 +8,7 @@ using MahApps.Metro.Controls;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 
-namespace Nemizisv2
+namespace Nemezisv2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -38,7 +38,6 @@ namespace Nemizisv2
         public MainWindow()
         {
             InitializeComponent();
-
 
             InitializeComponent();
 
@@ -213,16 +212,16 @@ namespace Nemizisv2
             consoleResponse = "";
             p.OutputDataReceived += new DataReceivedEventHandler(
                     (s, e) =>
-                            {
-                                if (e.Data == null)
-                                {
-                                    del(consoleResponse);
-                                }
-                                else
-                                {
-                                    consoleResponse += e.Data + "\n";
-                                }
-                            }
+                    {
+                        if (e.Data == null)
+                        {
+                            del(consoleResponse);
+                        }
+                        else
+                        {
+                            consoleResponse += e.Data + "\n";
+                        }
+                    }
                     );
             p.ErrorDataReceived += new DataReceivedEventHandler((s, e) =>
             {
@@ -318,8 +317,7 @@ namespace Nemizisv2
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Nemezis v1.0.2!\nCoded by Blizzard\nCoded and Designed by Du'Islingr", "About");
+            MessageBox.Show("Nemezis v2!\nCoded by Blizzard\nCoded and Designed by Du'Islingr", "About");
         }
-
     }
 }
