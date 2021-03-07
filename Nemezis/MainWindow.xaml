@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="Nemezis" Height="350" Width="525" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight"
+        Title="Nemezis" Height="350" Width="380" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight"
                 GlowBrush="{DynamicResource AccentColorBrush}"
                 BorderThickness="1"
                 TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -21,7 +21,7 @@
 
                 <Label x:Name="Assembly2" Content="Hex" Height="25.098" Margin="-0.001,-3.029,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70.521"/>
                 <Label x:Name="Hex2" Content="Assembly&#xD;&#xA;" Margin="0,48.069,0,0" HorizontalAlignment="Left" Height="24.953" VerticalAlignment="Top"/>
-                <TextBox x:Name="HEX2ASM_ASMBX" Height="25.215" Margin="-0.001,73.022,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="225.414"/>
+                <TextBox x:Name="HEX2ASM_ASMBX" Height="25" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="222"/>
             </Grid>
         </GroupBox>
 
